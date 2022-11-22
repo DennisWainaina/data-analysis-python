@@ -82,22 +82,24 @@ def cleaning():
     print(df)
 
     # The next step is to filter out data according to a certain percentile
-    correct_height = df['height'][df['height'] >= df['height'].quantile(0.025) &
-                                  df['height'] < df['height'].quantile(0.975)]
+    correct_height = df['height'][((df['height']) >= (df['height'].quantile(0.025))) &
+                                  ((df['height']) < (df['height'].quantile(0.975)))]
     print(correct_height)
     df['height'] = correct_height
-    correct_height1 = df['height'][df['height'] < df['height'].quantile(0.975)]
+    correct_height1 = df['height'][(df['height']) < (df['height'].quantile(0.975))]
     print(correct_height1)
 
-    correct_weight = df['weight'][df['weight'] < df['weight'].quantile(0.975) &
-                                  df['weight'] > df['weight'].quantile(0.025)]
+    correct_weight = df['weight'][((df['weight']) < (df['weight'].quantile(0.975))) &
+                                  ((df['weight']) > (df['weight'].quantile(0.025)))]
     print(correct_weight)
     df['weight'] = correct_weight
-    correct_weight1 = df['weight'][df['weight'] > df['weight'].quantile(0.025)]
+    correct_weight1 = df['weight'][(df['weight']) > (df['weight'].quantile(0.025))]
     print(correct_weight1)
 
     print(df)
 
+    
+print('This is the final piece of code')
 
 df.to_excel('medical_data.xlsx')
 
