@@ -158,3 +158,4 @@ def draw_heat_map():
 
 
 draw_heat_map()
+# The code works and the project is complete
