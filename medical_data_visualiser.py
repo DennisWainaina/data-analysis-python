@@ -1,5 +1,11 @@
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+crash_df = sns.load_dataset('car_crashes')
+print(crash_df)
 df = pd.read_csv('medical_examination.csv')
+print(df.head)
 height = df['height']
 print(height)
 print('The average height is', height.mean())
@@ -70,6 +76,27 @@ def normalise():
 
 normalise()
 
+
+def draw_cat_plot():
+    # Create DataFrame for cat plot using `pd.melt` using just the values from 'cholesterol', 'gluc', 'smoke', 'alco',
+    # 'active', and 'overweight'.
+    df1 = df[["cardio", "active", "alco", "cholesterol", "gluc", "overweight", "smoke"]]
+    df_cat = pd.melt(df1, id_vars='cardio')
+
+    # Group and reformat the data to split it by 'cardio'. Show the counts of each feature.
+    #  You will have to rename one of the columns for the catplot to work correctly.
+    # df_cat = None
+
+    # Draw the catplot with 'sns.catplot()'
+    fig = sns.catplot(x="variable", col="cardio", hue="value", data=df_cat, kind="count").set_axis_labels("variable",
+                                                                                                          "total").fig
+
+    # Do not modify the next two lines
+    fig.savefig('catplot.png')
+    return fig
+
+
+draw_cat_plot()
 # Cleaning the data
 
 
@@ -98,9 +125,36 @@ def cleaning():
 
     print(df)
 
-    
+
 print('This is the final piece of code')
 
 df.to_excel('medical_data.xlsx')
 
 cleaning()
+
+
+def draw_heat_map():
+    plt.figure(figsize=(8, 6))
+    sns.set_context('paper', font_scale=1.4)
+
+    df_heat = df
+
+    # Calculate the correlation matrix
+    corr = df_heat.corr(method='pearson')
+
+    # Generate a mask for the upper triangle
+    mask = np.triu(corr)
+
+    # Set up the matplotlib figure
+    fig, ax = plt.subplots(figsize=(12, 10))
+
+    # Draw the heatmap with 'sns.heatmap()'
+    sns.heatmap(corr, mask=mask, square=True, annot=True, fmt="0.1f", vmax=.32, cmap='gnuplot2', linewidths=1)
+    plt.show()
+
+    # Do not modify the next two lines
+    fig.savefig('heatmap.png')
+    return fig
+
+
+draw_heat_map()
