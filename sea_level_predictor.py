@@ -26,7 +26,7 @@ def draw_plot():
     print(list1)
     ax.plot(x_fit1, list1)
 
-    # Creating second line of bestfit form 2000 to 2051
+    # Creating second line of bestfit form 2000 to 2050
     x_fit2 = list(range(2000, 2051))
 
     list2 = []
