@@ -190,4 +190,3 @@ for b in list1:
         list1[x] = list2[y]
 print(list1)
 print('Hello world')
-print('God is good')
