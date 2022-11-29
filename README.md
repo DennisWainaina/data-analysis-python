@@ -6,4 +6,5 @@ It consisted of 5 projects which included:
 3. A program that takes medical data and analyses it to obtain crucial information about a patient with visualisation
 4. A program that shows the no of freecodecamp views over a period of 3 years
 5. A program that shows the rise in sea level from 1880 to 2050
+# Exercises
 The fibonnaci python file is a bunch of beginner challenges undertaken to improve my Python and problem solving skills in Programming
