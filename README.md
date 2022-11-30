@@ -8,3 +8,8 @@ It consisted of 5 projects which included:
 5. A program that shows the rise in sea level from 1880 to 2050
 # Exercises
 The fibonnaci python file is a bunch of beginner challenges undertaken to improve my Python and problem solving skills in Programming
+# What I learnt;
+1. Data discovery
+2. Data Preparation ( Cleaning of data before analysis)
+3. Exploratory Data Analysis ( Visualising data using charts and graphs)
+4. Data Modelling - Using regression analysis to predict future trends according to the data given
