@@ -6,6 +6,7 @@ It consisted of 5 projects which included:
 3. A project undertaken that takes medical data and analyses it to obtain crucial information about a patient with visualisation.
 4. A project undetaken that shows the no of freecodecamp views over a period of 3 years.
 5. A project undertaken with data from 1880 to 2013 to predict the rise of sea level from 2013 to 2050. 
+![sea_level](https://user-images.githubusercontent.com/116555573/207330661-7e6d7e51-508e-4c2e-a1d2-317c769c7e58.png)
 # Exercises
 The fibonnaci python file is a bunch of beginner challenges undertaken to improve my Python and problem solving skills in Programming
 # What I learnt;
